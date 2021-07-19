@@ -1,12 +1,12 @@
-package httpserver
+package http
 
 import (
-	"distributed-kv-in-go/cache"
+	cache2 "distributed-kv-in-go/server/cache"
 	"net/http"
 )
 
 type Server struct {
-	cache.Cache
+	cache2.Cache
 }
 
 func (s *Server) Listen() {
@@ -17,6 +17,6 @@ func (s *Server) Listen() {
 	}
 }
 
-func New(c cache.Cache) *Server {
+func New(c cache2.Cache) *Server {
 	return &Server{c}
 }
