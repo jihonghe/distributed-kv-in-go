@@ -1,16 +1,16 @@
 package tcp
 
 import (
-	cache2 "distributed-kv-in-go/server/cache"
+	"distributed-kv-in-go/server/cache"
 	"log"
 	"net"
 )
 
 type Server struct {
-	cache2.Cache
+	cache.Cache
 }
 
-func New(c cache2.Cache) *Server {
+func New(c cache.Cache) *Server {
 	return &Server{c}
 }
 
